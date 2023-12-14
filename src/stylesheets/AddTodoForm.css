@@ -1,0 +1,37 @@
+.add-todo-form {
+  display: flex;
+  width: 100%;
+}
+
+.todo-input {
+  flex-grow: 1; /* Allows the input to grow to fill available space */
+  width: calc(100% - 10px); /* Adjust if there's a margin or padding */
+  padding: 10px; /* Adjust padding as needed */
+  margin-right: 10px; /* Spacing between input and button */
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.add-todo-button {
+  white-space: nowrap;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .add-todo-form {
+    flex-direction: column;
+  }
+
+  .todo-input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .add-todo-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
