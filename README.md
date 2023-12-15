@@ -32,7 +32,6 @@ git clone https://github.com/sorlando92/react-todo-app.git
 
 ```
 cd react-todo-app
-
 ```
 
 3. Install dependencies:
