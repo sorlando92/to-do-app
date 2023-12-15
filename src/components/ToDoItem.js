@@ -2,6 +2,16 @@ import { React, useState } from "react";
 import "../stylesheets/ToDoItem.css";
 
 function ToDoItem({ todo, index, completeTodo, deleteTodo, editTodo }) {
+  /**
+   * The ToDoItem component represents a single to-do item within the to-do list.
+   * It is responsible for displaying the individual to-do item's content and
+   * providing options for user interaction. This includes buttons for editing,
+   * completing, and deleting the to-do item. Each ToDoItem receives its data
+   * and functions for these actions as props from the ToDoList component.
+   * The component renders the to-do's text and conditionally displays either
+   * the editable input field or the standard text view based on the current state.
+   */
+
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(todo.text);
 
@@ -20,7 +30,6 @@ function ToDoItem({ todo, index, completeTodo, deleteTodo, editTodo }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.value);
     if (!editText) return;
     editTodo(index, editText);
     setIsEditing(false);

@@ -4,6 +4,14 @@ import AddToDoForm from "./components/AddToDoForm";
 import "./stylesheets/App.css";
 
 function App() {
+  /**
+   * The App component serves as the top-level container for the to-do items and related functions.
+   * It maintains the state for all to-do items and provides the necessary functionality
+   * for adding, editing, and deleting items. These states and functions are passed down
+   * to the ToDoList component and further to each ToDoItem, ensuring a unidirectional data flow
+   * and separation of concerns within the application.
+   */
+
   const [todos, setTodos] = useState([]);
 
   const addTodo = (text) => {
